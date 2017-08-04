@@ -1,0 +1,15 @@
+D:\webSite\pipe\Model\obj\Debug\ResolveAssemblyReference.cache
+D:\webSite\pipe\Model\bin\Debug\ZhangWei.Model.dll
+D:\webSite\pipe\Model\bin\Debug\ZhangWei.Model.pdb
+D:\webSite\pipe\Model\obj\Debug\ZhangWei.Model.dll
+D:\webSite\pipe\Model\obj\Debug\ZhangWei.Model.pdb
+D:\laboratory\pipe\Model\bin\Debug\ZhangWei.Model.dll
+D:\laboratory\pipe\Model\bin\Debug\ZhangWei.Model.pdb
+D:\laboratory\pipe\Model\obj\Debug\ResolveAssemblyReference.cache
+D:\laboratory\pipe\Model\obj\Debug\ZhangWei.Model.dll
+D:\laboratory\pipe\Model\obj\Debug\ZhangWei.Model.pdb
+D:\ProCode\pipe\Model\bin\Debug\ZhangWei.Model.dll
+D:\ProCode\pipe\Model\bin\Debug\ZhangWei.Model.pdb
+D:\ProCode\pipe\Model\obj\Debug\ResolveAssemblyReference.cache
+D:\ProCode\pipe\Model\obj\Debug\ZhangWei.Model.dll
+D:\ProCode\pipe\Model\obj\Debug\ZhangWei.Model.pdb

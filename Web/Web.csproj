@@ -1,0 +1,1866 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B535162-10C2-4238-BC56-193B968E1834}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZhangWei.Web</RootNamespace>
+    <AssemblyName>ZhangWei.Web</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.UI.WebControls">
+      <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\checkright.ascx" />
+    <Content Include="Controls\copyright.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\top1.gif" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax\Ajax.ashx.cs">
+      <DependentUpon>Ajax.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ass\AddProForChang.aspx.cs">
+      <DependentUpon>AddProForChang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ass\AddProForChang.aspx.designer.cs">
+      <DependentUpon>AddProForChang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ass\SearchProducts.aspx.cs">
+      <DependentUpon>SearchProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ass\SearchProducts.aspx.designer.cs">
+      <DependentUpon>SearchProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Customer\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Customer\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Customer\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Customer\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Customer\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Customer\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Customer\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Customer\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Dept\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Dept\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Dept\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Dept\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Dept\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Dept\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Dept\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Dept\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Employee\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Employee\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Employee\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Employee\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Employee\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Employee\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Employee\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Employee\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\PassWordEdit.aspx.cs">
+      <DependentUpon>PassWordEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\PassWordEdit.aspx.designer.cs">
+      <DependentUpon>PassWordEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\PowerManage.aspx.cs">
+      <DependentUpon>PowerManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\PowerManage.aspx.designer.cs">
+      <DependentUpon>PowerManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Product\ProductView.aspx.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Product\ProductView.aspx.designer.cs">
+      <DependentUpon>ProductView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\StoreHouse\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\StoreHouse\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\StoreHouse\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\StoreHouse\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\StoreHouse\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\StoreHouse\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\StoreHouse\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\StoreHouse\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buy\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buy\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buy\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buy\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buy\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buy_Detail\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buy_Detail\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buy_Detail\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buy_Detail\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buy_Detail\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buy_Detail\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buy_Detail\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buy_Detail\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataManage.aspx.cs">
+      <DependentUpon>DataManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataManage.aspx.designer.cs">
+      <DependentUpon>DataManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dept_Customer\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dept_Customer\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dept_Customer\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dept_Customer\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dept_Customer\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dept_Customer\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dept_Customer\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dept_Customer\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dept_Supplier\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dept_Supplier\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dept_Supplier\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dept_Supplier\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dept_Supplier\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dept_Supplier\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dept_Supplier\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dept_Supplier\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductClass\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductClass\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductClass\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductClass\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductClass\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductClass\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductClass\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductClass\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductList\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductList\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductList\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductList\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductList\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductList\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductList\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductList\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductSpec\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductSpec\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductSpec\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductSpec\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductSpec\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductSpec\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductSpec\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductSpec\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductUnit\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductUnit\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductUnit\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductUnit\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductUnit\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductUnit\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\ProductUnit\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\ProductUnit\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Product\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Product\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Product\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Product\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Product\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Product\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Product\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Product\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Supplier\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Supplier\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Supplier\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Supplier\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Supplier\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Supplier\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo\Supplier\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseInfo\Supplier\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CheckRight.ascx.cs">
+      <DependentUpon>checkright.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CheckRight.ascx.designer.cs">
+      <DependentUpon>checkright.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CopyRight.ascx.cs">
+      <DependentUpon>copyright.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CopyRight.ascx.designer.cs">
+      <DependentUpon>copyright.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EUser\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EUser\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EUser\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EUser\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EUser\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EUser\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EUser\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EUser\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LocalCass\UserPageBass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mainFrame.aspx.cs">
+      <DependentUpon>mainFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mainFrame.aspx.designer.cs">
+      <DependentUpon>mainFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Supplier\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product_Supplier\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Supplier\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product_Supplier\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Supplier\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product_Supplier\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product_Supplier\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product_Supplier\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\CheckStock.aspx.cs">
+      <DependentUpon>CheckStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\CheckStock.aspx.designer.cs">
+      <DependentUpon>CheckStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EnterStockDefinite.aspx.cs">
+      <DependentUpon>EnterStockDefinite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\EnterStockDefinite.aspx.designer.cs">
+      <DependentUpon>EnterStockDefinite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\EnterStockGather.aspx.cs">
+      <DependentUpon>EnterStockGather.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\EnterStockGather.aspx.designer.cs">
+      <DependentUpon>EnterStockGather.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\HisTab.aspx.cs">
+      <DependentUpon>HisTab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\HisTab.aspx.designer.cs">
+      <DependentUpon>HisTab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ProductFlowing.aspx.cs">
+      <DependentUpon>ProductFlowing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\ProductFlowing.aspx.designer.cs">
+      <DependentUpon>ProductFlowing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SaleDefinite.aspx.cs">
+      <DependentUpon>SaleDefinite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\SaleDefinite.aspx.designer.cs">
+      <DependentUpon>SaleDefinite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSaleDetail.aspx.cs">
+      <DependentUpon>BackSaleDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSaleDetail.aspx.designer.cs">
+      <DependentUpon>BackSaleDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSaleRecord.aspx.cs">
+      <DependentUpon>BackSaleRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSaleRecord.aspx.designer.cs">
+      <DependentUpon>BackSaleRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SaleDtlModify.aspx.cs">
+      <DependentUpon>SaleDtlModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\SaleDtlModify.aspx.designer.cs">
+      <DependentUpon>SaleDtlModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SaleModifyList.aspx.cs">
+      <DependentUpon>SaleModifyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\SaleModifyList.aspx.designer.cs">
+      <DependentUpon>SaleModifyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SaleReport.aspx.cs">
+      <DependentUpon>SaleReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\SaleReport.aspx.designer.cs">
+      <DependentUpon>SaleReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrder\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaleOrder\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrder\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaleOrder\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrder\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaleOrder\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrder\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaleOrder\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrder_Detail\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaleOrder_Detail\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrder_Detail\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaleOrder_Detail\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrder_Detail\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaleOrder_Detail\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrder_Detail\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SaleOrder_Detail\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSale.aspx.cs">
+      <DependentUpon>BackSale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSale.aspx.designer.cs">
+      <DependentUpon>BackSale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSale\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSale\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSale\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSale\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSale\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSale\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSale\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSale\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSale_Detail\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSale_Detail\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSale_Detail\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSale_Detail\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSale_Detail\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSale_Detail\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\BackSale_Detail\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\BackSale_Detail\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\SaleDetail.aspx.cs">
+      <DependentUpon>SaleDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\SaleDetail.aspx.designer.cs">
+      <DependentUpon>SaleDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SaleGather.aspx.cs">
+      <DependentUpon>SaleGather.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\SaleGather.aspx.designer.cs">
+      <DependentUpon>SaleGather.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Sale\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\Sale\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Sale\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\Sale\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Sale\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\Sale\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Sale\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\Sale\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Sale_Detail\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\Sale_Detail\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Sale_Detail\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\Sale_Detail\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Sale_Detail\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\Sale_Detail\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\Sale_Detail\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\Sale_Detail\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales\sell.aspx.cs">
+      <DependentUpon>sell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sales\sell.aspx.designer.cs">
+      <DependentUpon>sell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sysdiagrams\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sysdiagrams\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sysdiagrams\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sysdiagrams\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\DataBackup.aspx.cs">
+      <DependentUpon>DataBackup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\DataBackup.aspx.designer.cs">
+      <DependentUpon>DataBackup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="terminate.aspx.cs">
+      <DependentUpon>terminate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="terminate.aspx.designer.cs">
+      <DependentUpon>terminate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="topFrame.aspx.cs">
+      <DependentUpon>topFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="topFrame.aspx.designer.cs">
+      <DependentUpon>topFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValidateCode.aspx.cs">
+      <DependentUpon>ValidateCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValidateCode.aspx.designer.cs">
+      <DependentUpon>ValidateCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\AddBackStock.aspx.cs">
+      <DependentUpon>AddBackStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\AddBackStock.aspx.designer.cs">
+      <DependentUpon>AddBackStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\AddLeaveStock.aspx.cs">
+      <DependentUpon>AddLeaveStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\AddLeaveStock.aspx.designer.cs">
+      <DependentUpon>AddLeaveStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\AddStockContract.aspx.cs">
+      <DependentUpon>AddStockContract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\AddStockContract.aspx.designer.cs">
+      <DependentUpon>AddStockContract.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BackStockDetail.aspx.cs">
+      <DependentUpon>BackStockDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BackStockDetail.aspx.designer.cs">
+      <DependentUpon>BackStockDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BackStockRecord.aspx.cs">
+      <DependentUpon>BackStockRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BackStockRecord.aspx.designer.cs">
+      <DependentUpon>BackStockRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BackStock\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BackStock\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BackStock\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BackStock\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BackStock\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BackStock\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BackStock\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BackStock\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BackStock_Detail\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BackStock_Detail\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BackStock_Detail\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BackStock_Detail\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BackStock_Detail\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BackStock_Detail\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BackStock_Detail\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BackStock_Detail\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder_Detail\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder_Detail\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder_Detail\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder_Detail\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder_Detail\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder_Detail\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder_Detail\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\BuyOrder_Detail\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStockEdit.aspx.cs">
+      <DependentUpon>EnterStockEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStockEdit.aspx.designer.cs">
+      <DependentUpon>EnterStockEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStockEditDtl.aspx.cs">
+      <DependentUpon>EnterStockEditDtl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStockEditDtl.aspx.designer.cs">
+      <DependentUpon>EnterStockEditDtl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStockRecord.aspx.cs">
+      <DependentUpon>EnterStockRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStockRecord.aspx.designer.cs">
+      <DependentUpon>EnterStockRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStockRecordDtl.aspx.cs">
+      <DependentUpon>EnterStockRecordDtl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStockRecordDtl.aspx.designer.cs">
+      <DependentUpon>EnterStockRecordDtl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStock\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStock\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStock\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStock\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStock\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStock\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStock\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStock\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStock_Detail\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStock_Detail\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStock_Detail\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStock_Detail\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStock_Detail\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStock_Detail\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\EnterStock_Detail\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\EnterStock_Detail\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock_Detail\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock_Detail\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock_Detail\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock_Detail\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock_Detail\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock_Detail\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock_Detail\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\LeaveStock_Detail\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\ShowBuyOrderDetail.aspx.cs">
+      <DependentUpon>ShowBuyOrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\ShowBuyOrderDetail.aspx.designer.cs">
+      <DependentUpon>ShowBuyOrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\StockPile\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\StockPile\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\StockPile\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\StockPile\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\StockPile\Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\StockPile\Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\StockPile\Show.aspx.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\StockPile\Show.aspx.designer.cs">
+      <DependentUpon>Show.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\StockView.aspx.cs">
+      <DependentUpon>StockView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\StockView.aspx.designer.cs">
+      <DependentUpon>StockView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\TransferDtl.aspx.cs">
+      <DependentUpon>TransferDtl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\TransferDtl.aspx.designer.cs">
+      <DependentUpon>TransferDtl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\TransferRecord.aspx.cs">
+      <DependentUpon>TransferRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\TransferRecord.aspx.designer.cs">
+      <DependentUpon>TransferRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="warehouse\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="warehouse\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\CheckRight.ascx.resx">
+      <DependentUpon>CheckRight.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CopyRight.ascx.resx">
+      <DependentUpon>CopyRight.ascx.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\ZhangWei.Web.Controls.CheckRight.resources" />
+    <EmbeddedResource Include="obj\Debug\ZhangWei.Web.Controls.CopyRight1.resources" />
+    <EmbeddedResource Include="obj\Debug\ZhangWei.Web.Global.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AspNetPager732\Wuqi.Webdiyer.AspNetPager.csproj">
+      <Project>{B1F16029-B778-4A05-9C10-15C779375CD4}</Project>
+      <Name>Wuqi.Webdiyer.AspNetPager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LTP.Accounts\LTP.csproj">
+      <Project>{C4C6EA6A-F776-49B6-872E-883D0FFE5EDE}</Project>
+      <Name>LTP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax\Ajax.ashx" />
+    <Content Include="BaseInfo\ProductClass\Add.aspx" />
+    <Content Include="BaseInfo\ProductClass\List.aspx" />
+    <Content Include="BaseInfo\ProductClass\Modify.aspx" />
+    <Content Include="BaseInfo\ProductClass\Show.aspx" />
+    <Content Include="BaseInfo\ProductList\Add.aspx" />
+    <Content Include="BaseInfo\ProductList\List.aspx" />
+    <Content Include="BaseInfo\ProductList\Modify.aspx" />
+    <Content Include="BaseInfo\ProductList\Show.aspx" />
+    <Content Include="BaseInfo\ProductSpec\Add.aspx" />
+    <Content Include="BaseInfo\ProductSpec\List.aspx" />
+    <Content Include="BaseInfo\ProductSpec\Modify.aspx" />
+    <Content Include="BaseInfo\ProductSpec\Show.aspx" />
+    <Content Include="BaseInfo\ProductUnit\Add.aspx" />
+    <Content Include="BaseInfo\ProductUnit\List.aspx" />
+    <Content Include="BaseInfo\ProductUnit\Modify.aspx" />
+    <Content Include="BaseInfo\ProductUnit\Show.aspx" />
+    <Content Include="BaseInfo\Product\Add.aspx" />
+    <Content Include="BaseInfo\Product\List.aspx" />
+    <Content Include="BaseInfo\Product\Modify.aspx" />
+    <Content Include="BaseInfo\Product\Show.aspx" />
+    <Content Include="Default.html" />
+    <Content Include="EUser\Add.aspx" />
+    <Content Include="EUser\List.aspx" />
+    <Content Include="EUser\Modify.aspx" />
+    <Content Include="EUser\Show.aspx" />
+    <Content Include="Images\200842182840682_1.gif" />
+    <Content Include="Images\code2.JPG" />
+    <Content Include="Images\loading2.gif" />
+    <Content Include="Images\loading1.gif" />
+    <Content Include="Images\loginbutton.gif" />
+    <Content Include="Images\menu_list_icon.gif" />
+    <Content Include="Images\menu_list_split.gif" />
+    <Content Include="Images\menu_title_bg.gif" />
+    <Content Include="Images\menu_title_down.gif" />
+    <Content Include="Images\menu_title_up.gif" />
+    <Content Include="Images\splitBar.gif" />
+    <Content Include="Images\splitBar2.gif" />
+    <Content Include="Images\work_862_684_20070719_17151.gif" />
+    <Content Include="js\calendar1.js" />
+    <Content Include="js\CheckBox.js" />
+    <Content Include="leftFrame.html" />
+    <Content Include="Login.aspx" />
+    <Content Include="mainFrame.aspx" />
+    <Content Include="mainFrame.html" />
+    <Content Include="My97DatePickerdemo.htm" />
+    <Content Include="My97DatePicker\calendar.js" />
+    <Content Include="My97DatePicker\config.js" />
+    <Content Include="My97DatePicker\lang\en.js" />
+    <Content Include="My97DatePicker\lang\zh-cn.js" />
+    <Content Include="My97DatePicker\lang\zh-tw.js" />
+    <Content Include="My97DatePicker\My97DatePicker.htm" />
+    <Content Include="My97DatePicker\skin\datePicker.gif" />
+    <Content Include="My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="My97DatePicker\skin\default\img.gif" />
+    <Content Include="My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="My97DatePicker\WdatePicker.js" />
+    <Content Include="My97DatePicker\开发包\lang\en.js" />
+    <Content Include="My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="My97DatePicker\开发包\readme.txt" />
+    <Content Include="My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="Style\Style.css" />
+    <Content Include="test.aspx" />
+    <Content Include="topFrame.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ass\SearchProducts.aspx" />
+    <Content Include="BaseInfo\Customer\Add.aspx" />
+    <Content Include="BaseInfo\Customer\List.aspx" />
+    <Content Include="BaseInfo\Customer\Modify.aspx" />
+    <Content Include="BaseInfo\Customer\Show.aspx" />
+    <Content Include="BaseInfo\Dept\Add.aspx" />
+    <Content Include="BaseInfo\Dept\List.aspx" />
+    <Content Include="BaseInfo\Dept\Modify.aspx" />
+    <Content Include="BaseInfo\Dept\Show.aspx" />
+    <Content Include="BaseInfo\Employee\Add.aspx" />
+    <Content Include="BaseInfo\Employee\List.aspx" />
+    <Content Include="BaseInfo\Employee\Modify.aspx" />
+    <Content Include="BaseInfo\Employee\Show.aspx" />
+    <Content Include="BaseInfo\StoreHouse\Add.aspx" />
+    <Content Include="BaseInfo\StoreHouse\List.aspx" />
+    <Content Include="BaseInfo\StoreHouse\Modify.aspx" />
+    <Content Include="BaseInfo\StoreHouse\Show.aspx" />
+    <Content Include="bin\AspNetPager.dll" />
+    <Content Include="bin\AspNetPager.pdb" />
+    <Content Include="bin\COM.Excel.dll" />
+    <Content Include="bin\en\AspNetPager.resources.dll" />
+    <Content Include="bin\Excel.dll" />
+    <Content Include="bin\IBatisNet.Common.dll" />
+    <Content Include="bin\IBatisNet.DataMapper.dll" />
+    <Content Include="bin\LTP.Accounts.dll" />
+    <Content Include="bin\LTP.Accounts.pdb" />
+    <Content Include="bin\Maticsoft.BLL.dll" />
+    <Content Include="bin\Maticsoft.BLL.pdb" />
+    <Content Include="bin\Maticsoft.Common.dll" />
+    <Content Include="bin\Maticsoft.Common.pdb" />
+    <Content Include="bin\Maticsoft.DAL.dll" />
+    <Content Include="bin\Maticsoft.DAL.pdb" />
+    <Content Include="bin\Maticsoft.DBUtility.dll" />
+    <Content Include="bin\Maticsoft.DBUtility.pdb" />
+    <Content Include="bin\Maticsoft.Model.dll" />
+    <Content Include="bin\Maticsoft.Model.pdb" />
+    <Content Include="bin\Microsoft.Vbe.Interop.dll" />
+    <Content Include="bin\Microsoft.Web.UI.WebControls.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\office.dll" />
+    <Content Include="bin\OpenSmtp.dll" />
+    <Content Include="bin\OWC10Chart.dll" />
+    <Content Include="bin\System.Data.SQLite.dll" />
+    <Content Include="bin\zh-CHT\AspNetPager.resources.dll" />
+    <Content Include="bin\ZhangWei.BLL.dll" />
+    <Content Include="bin\ZhangWei.BLL.pdb" />
+    <Content Include="bin\ZhangWei.DAL.dll" />
+    <Content Include="bin\ZhangWei.DAL.pdb" />
+    <Content Include="bin\ZhangWei.DBUtility.dll" />
+    <Content Include="bin\ZhangWei.DBUtility.pdb" />
+    <Content Include="bin\ZhangWei.Model.dll" />
+    <Content Include="bin\ZhangWei.Model.pdb" />
+    <Content Include="bin\ZhangWei.Web.dll" />
+    <Content Include="bin\ZhangWei.Web.pdb" />
+    <Content Include="Buy\Add.aspx" />
+    <Content Include="Buy\List.aspx" />
+    <Content Include="Buy\Modify.aspx" />
+    <Content Include="Buy\Show.aspx" />
+    <Content Include="Buy_Detail\Add.aspx" />
+    <Content Include="Buy_Detail\List.aspx" />
+    <Content Include="Buy_Detail\Modify.aspx" />
+    <Content Include="Buy_Detail\Show.aspx" />
+    <Content Include="Dept_Customer\Add.aspx" />
+    <Content Include="Dept_Customer\List.aspx" />
+    <Content Include="Dept_Customer\Modify.aspx" />
+    <Content Include="Dept_Customer\Show.aspx" />
+    <Content Include="Dept_Supplier\Add.aspx" />
+    <Content Include="Dept_Supplier\List.aspx" />
+    <Content Include="Dept_Supplier\Modify.aspx" />
+    <Content Include="Dept_Supplier\Show.aspx" />
+    <Content Include="BaseInfo\MasterPage.Master" />
+    <Content Include="BaseInfo\Supplier\Add.aspx" />
+    <Content Include="BaseInfo\Supplier\List.aspx" />
+    <Content Include="BaseInfo\Supplier\Modify.aspx" />
+    <Content Include="BaseInfo\Supplier\Show.aspx" />
+    <Content Include="jQueryTable.htm" />
+    <Content Include="js\flexigrid.js" />
+    <Content Include="js\jquery-1.4.1-vsdoc.js" />
+    <Content Include="js\jquery-1.4.3.min.js" />
+    <Content Include="js\jquery-1.7.1.js" />
+    <Content Include="js\jquery-1.7.1.min.js" />
+    <Content Include="lhgdialog\favicon.ico" />
+    <Content Include="lhgdialog\index.html" />
+    <Content Include="lhgdialog\jquery-1.7.1.min.js" />
+    <Content Include="lhgdialog\lhgcore.lhgdialog.min.js" />
+    <Content Include="lhgdialog\lhgdialog.js" />
+    <Content Include="lhgdialog\lhgdialog.min.js" />
+    <Content Include="lhgdialog\skins\blue.css" />
+    <Content Include="lhgdialog\skins\blue\blue_s.png" />
+    <Content Include="lhgdialog\skins\blue\blue_s2.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\blue_titbtn.gif" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_b.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_l.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_lb.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_lt.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_lt2.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_r.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_rb.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_rt.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_rt2.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_t.png" />
+    <Content Include="lhgdialog\skins\blue\ie6\ui_t2.png" />
+    <Content Include="lhgdialog\skins\chrome.css" />
+    <Content Include="lhgdialog\skins\chrome\chrome_s.gif" />
+    <Content Include="lhgdialog\skins\chrome\chrome_s2.gif" />
+    <Content Include="lhgdialog\skins\chrome\chrome_s3.gif" />
+    <Content Include="lhgdialog\skins\default.css" />
+    <Content Include="lhgdialog\skins\discuz.css" />
+    <Content Include="lhgdialog\skins\icons\32X32\fail.png" />
+    <Content Include="lhgdialog\skins\icons\32X32\hits.png" />
+    <Content Include="lhgdialog\skins\icons\32X32\i.png" />
+    <Content Include="lhgdialog\skins\icons\32X32\succ.png" />
+    <Content Include="lhgdialog\skins\icons\alert.gif" />
+    <Content Include="lhgdialog\skins\icons\confirm.gif" />
+    <Content Include="lhgdialog\skins\icons\discuz_bg.gif" />
+    <Content Include="lhgdialog\skins\icons\error.gif" />
+    <Content Include="lhgdialog\skins\icons\face-sad.png" />
+    <Content Include="lhgdialog\skins\icons\face-smile.png" />
+    <Content Include="lhgdialog\skins\icons\gb_tip_layer.png" />
+    <Content Include="lhgdialog\skins\icons\gb_tip_layer_ie6.png" />
+    <Content Include="lhgdialog\skins\icons\lhgcore.gif" />
+    <Content Include="lhgdialog\skins\icons\loading.gif" />
+    <Content Include="lhgdialog\skins\icons\prompt.gif" />
+    <Content Include="lhgdialog\skins\icons\success.gif" />
+    <Content Include="lhgdialog\skins\icons\tips.gif" />
+    <Content Include="lhgdialog\skins\idialog.css" />
+    <Content Include="lhgdialog\skins\idialog\idialog_s.png" />
+    <Content Include="lhgdialog\skins\idialog\idialog_s2.png" />
+    <Content Include="lhgdialog\skins\idialog\ie6\ui_b.png" />
+    <Content Include="lhgdialog\skins\idialog\ie6\ui_close.hover.png" />
+    <Content Include="lhgdialog\skins\idialog\ie6\ui_close.png" />
+    <Content Include="lhgdialog\skins\idialog\ie6\ui_l.png" />
+    <Content Include="lhgdialog\skins\idialog\ie6\ui_lb.png" />
+    <Content Include="lhgdialog\skins\idialog\ie6\ui_lt.png" />
+    <Content Include="lhgdialog\skins\idialog\ie6\ui_r.png" />
+    <Content Include="lhgdialog\skins\idialog\ie6\ui_rb.png" />
+    <Content Include="lhgdialog\skins\idialog\ie6\ui_rt.png" />
+    <Content Include="lhgdialog\skins\idialog\ie6\ui_t.png" />
+    <Content Include="lhgdialog\skins\jtop.css" />
+    <Content Include="lhgdialog\skins\mac.css" />
+    <Content Include="lhgdialog\skins\qq2011.css" />
+    <Content Include="lhgdialog\_demo\content\content.html" />
+    <Content Include="lhgdialog\_demo\content\first.html" />
+    <Content Include="lhgdialog\_demo\content\login.html" />
+    <Content Include="lhgdialog\_demo\content\second.html" />
+    <Content Include="lhgdialog\_demo\content\value.html" />
+    <Content Include="lhgdialog\_demo\content\value1.html" />
+    <Content Include="lhgdialog\_demo\demo.html" />
+    <Content Include="lhgdialog\_demo\demo.js" />
+    <Content Include="lhgdialog\_demo\demo1.html" />
+    <Content Include="lhgdialog\_doc\api.html" />
+    <Content Include="lhgdialog\_doc\common.css" />
+    <Content Include="lhgdialog\_doc\images\android.jpg" />
+    <Content Include="lhgdialog\_doc\images\boxtitle.gif" />
+    <Content Include="lhgdialog\_doc\images\dotline.gif" />
+    <Content Include="lhgdialog\_doc\images\hd_logo.gif" />
+    <Content Include="lhgdialog\_doc\license.txt" />
+    <Content Include="lhgdialog\_doc\prettify\prettify.css" />
+    <Content Include="lhgdialog\_doc\prettify\prettify.js" />
+    <Content Include="lhgdialog\_doc\update.html" />
+    <Content Include="lhgdialog\_doc\皮肤共用.css" />
+    <Content Include="lhgdialog\文件目录结构说明.txt" />
+    <Content Include="obj\Debug\Web.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ZhangWei.Web.dll" />
+    <Content Include="obj\Debug\ZhangWei.Web.pdb" />
+    <Content Include="Product_Supplier\Add.aspx" />
+    <Content Include="Product_Supplier\List.aspx" />
+    <Content Include="Product_Supplier\Modify.aspx" />
+    <Content Include="Product_Supplier\Show.aspx" />
+    <Content Include="SaleOrder\Add.aspx" />
+    <Content Include="SaleOrder\List.aspx" />
+    <Content Include="SaleOrder\Modify.aspx" />
+    <Content Include="SaleOrder\Show.aspx" />
+    <Content Include="SaleOrder_Detail\Add.aspx" />
+    <Content Include="SaleOrder_Detail\List.aspx" />
+    <Content Include="SaleOrder_Detail\Modify.aspx" />
+    <Content Include="SaleOrder_Detail\Show.aspx" />
+    <Content Include="Sales\Sale\Add.aspx" />
+    <Content Include="Sales\Sale\List.aspx" />
+    <Content Include="Sales\Sale\Modify.aspx" />
+    <Content Include="Sales\Sale\Show.aspx" />
+    <Content Include="Sales\Sale_Detail\Add.aspx" />
+    <Content Include="Sales\Sale_Detail\List.aspx" />
+    <Content Include="Sales\Sale_Detail\Modify.aspx" />
+    <Content Include="Sales\Sale_Detail\Show.aspx" />
+    <Content Include="Sales\sell.aspx" />
+    <Content Include="Style\flexigrid.css" />
+    <Content Include="Style\images\._fhbg.gif" />
+    <Content Include="Style\images\._wbg.gif" />
+    <Content Include="Style\images\bg.gif" />
+    <Content Include="Style\images\btn-sprite.gif" />
+    <Content Include="Style\images\ddn.png" />
+    <Content Include="Style\images\dn.png" />
+    <Content Include="Style\images\fhbg.gif" />
+    <Content Include="Style\images\first.gif" />
+    <Content Include="Style\images\hl.png" />
+    <Content Include="Style\images\last.gif" />
+    <Content Include="Style\images\line.gif" />
+    <Content Include="Style\images\load.gif" />
+    <Content Include="Style\images\load.png" />
+    <Content Include="Style\images\magnifier.png" />
+    <Content Include="Style\images\next.gif" />
+    <Content Include="Style\images\prev.gif" />
+    <Content Include="Style\images\up.png" />
+    <Content Include="Style\images\uup.png" />
+    <Content Include="Style\images\wbg.gif" />
+    <Content Include="sysdiagrams\Add.aspx" />
+    <Content Include="sysdiagrams\List.aspx" />
+    <Content Include="sysdiagrams\Modify.aspx" />
+    <Content Include="sysdiagrams\Show.aspx" />
+    <Content Include="topFrame.html" />
+    <Content Include="user\Add.aspx" />
+    <Content Include="user\List.aspx" />
+    <Content Include="user\Modify.aspx" />
+    <Content Include="user\Show.aspx" />
+    <Content Include="ValidateCode.aspx" />
+    <Content Include="warehouse\AddStockContract.aspx" />
+    <Content Include="warehouse\BuyOrder\Add.aspx" />
+    <Content Include="warehouse\BuyOrder\List.aspx" />
+    <Content Include="warehouse\BuyOrder\Modify.aspx" />
+    <Content Include="warehouse\BuyOrder\Show.aspx" />
+    <Content Include="warehouse\BuyOrder_Detail\Add.aspx" />
+    <Content Include="warehouse\BuyOrder_Detail\List.aspx" />
+    <Content Include="warehouse\BuyOrder_Detail\Modify.aspx" />
+    <Content Include="warehouse\BuyOrder_Detail\Show.aspx" />
+    <Content Include="warehouse\EnterStock\Add.aspx" />
+    <Content Include="warehouse\EnterStock\List.aspx" />
+    <Content Include="warehouse\EnterStock\Modify.aspx" />
+    <Content Include="warehouse\EnterStock\Show.aspx" />
+    <Content Include="warehouse\EnterStock_Detail\Add.aspx" />
+    <Content Include="warehouse\EnterStock_Detail\List.aspx" />
+    <Content Include="warehouse\EnterStock_Detail\Modify.aspx" />
+    <Content Include="warehouse\EnterStock_Detail\Show.aspx" />
+    <Content Include="warehouse\ShowBuyOrderDetail.aspx" />
+    <Content Include="warehouse\StockPile\Add.aspx" />
+    <Content Include="warehouse\StockPile\List.aspx" />
+    <Content Include="warehouse\StockPile\Modify.aspx" />
+    <Content Include="warehouse\StockPile\Show.aspx" />
+    <Content Include="webctrl_client\1_0\Images\folder.gif" />
+    <Content Include="webctrl_client\1_0\Images\folderopen.gif" />
+    <Content Include="webctrl_client\1_0\Images\html.gif" />
+    <Content Include="webctrl_client\1_0\Images\root.gif" />
+    <Content Include="webctrl_client\1_0\MultiPage.htc" />
+    <Content Include="webctrl_client\1_0\TabStrip.htc" />
+    <Content Include="webctrl_client\1_0\toolbar.htc" />
+    <Content Include="webctrl_client\1_0\TreeImages\f.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\fminus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\fplus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\i.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\L.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\Lminus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\Lplus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\minus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\plus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\r.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\Rminus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\Rplus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\F.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\Fminus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\Fplus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\I.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\L.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\Lminus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\Lplus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\minus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\plus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\r.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\Rminus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\Rplus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\T.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\Tminus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\Tplus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\rtl\white.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\T.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\Tminus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\Tplus.gif" />
+    <Content Include="webctrl_client\1_0\TreeImages\white.gif" />
+    <Content Include="webctrl_client\1_0\treeview.htc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ass\AddProForChang.aspx" />
+    <Content Include="BaseInfo\PassWordEdit.aspx" />
+    <Content Include="BaseInfo\PowerManage.aspx" />
+    <Content Include="BaseInfo\Product\ProductView.aspx" />
+    <Content Include="DataManage.aspx" />
+    <Content Include="Images\delete1.gif" />
+    <Content Include="Images\delete1.png" />
+    <Content Include="Images\loginBg.gif" />
+    <Content Include="Images\loginBg1.jpg" />
+    <Content Include="Images\loginBtn.gif" />
+    <Content Include="Images\news-title-bg.gif" />
+    <Content Include="js\install_lodop.exe" />
+    <Content Include="js\LodopFuncs.js" />
+    <Content Include="Report\CheckStock.aspx" />
+    <Content Include="Report\EnterStockDefinite.aspx" />
+    <Content Include="Report\EnterStockGather.aspx" />
+    <Content Include="Report\HisTab.aspx" />
+    <Content Include="Report\ProductFlowing.aspx" />
+    <Content Include="Report\SaleDefinite.aspx" />
+    <Content Include="Sales\BackSaleDetail.aspx" />
+    <Content Include="Sales\BackSaleRecord.aspx" />
+    <Content Include="Sales\SaleDtlModify.aspx" />
+    <Content Include="Sales\SaleModifyList.aspx" />
+    <Content Include="Sales\SaleReport.aspx" />
+    <Content Include="Sales\BackSale.aspx" />
+    <Content Include="Sales\BackSale\Add.aspx" />
+    <Content Include="Sales\BackSale\List.aspx" />
+    <Content Include="Sales\BackSale\Modify.aspx" />
+    <Content Include="Sales\BackSale\Show.aspx" />
+    <Content Include="Sales\BackSale_Detail\Add.aspx" />
+    <Content Include="Sales\BackSale_Detail\List.aspx" />
+    <Content Include="Sales\BackSale_Detail\Modify.aspx" />
+    <Content Include="Sales\BackSale_Detail\Show.aspx" />
+    <Content Include="Sales\SaleDetail.aspx" />
+    <Content Include="Report\SaleGather.aspx" />
+    <Content Include="SysManage\DataBackup.aspx" />
+    <Content Include="terminate.aspx" />
+    <Content Include="Txt\EffTime.txt" />
+    <Content Include="warehouse\AddBackStock.aspx" />
+    <Content Include="warehouse\AddLeaveStock.aspx" />
+    <Content Include="warehouse\BackStockDetail.aspx" />
+    <Content Include="warehouse\BackStockRecord.aspx" />
+    <Content Include="warehouse\BackStock\Add.aspx" />
+    <Content Include="warehouse\BackStock\List.aspx" />
+    <Content Include="warehouse\BackStock\Modify.aspx" />
+    <Content Include="warehouse\BackStock\Show.aspx" />
+    <Content Include="warehouse\BackStock_Detail\Add.aspx" />
+    <Content Include="warehouse\BackStock_Detail\List.aspx" />
+    <Content Include="warehouse\BackStock_Detail\Modify.aspx" />
+    <Content Include="warehouse\BackStock_Detail\Show.aspx" />
+    <Content Include="warehouse\EnterStockEdit.aspx" />
+    <Content Include="warehouse\EnterStockEditDtl.aspx" />
+    <Content Include="warehouse\EnterStockRecord.aspx" />
+    <Content Include="warehouse\EnterStockRecordDtl.aspx" />
+    <Content Include="warehouse\LeaveStock\Add.aspx" />
+    <Content Include="warehouse\LeaveStock\List.aspx" />
+    <Content Include="warehouse\LeaveStock\Modify.aspx" />
+    <Content Include="warehouse\LeaveStock\Show.aspx" />
+    <Content Include="warehouse\LeaveStock_Detail\Add.aspx" />
+    <Content Include="warehouse\LeaveStock_Detail\List.aspx" />
+    <Content Include="warehouse\LeaveStock_Detail\Modify.aspx" />
+    <Content Include="warehouse\LeaveStock_Detail\Show.aspx" />
+    <Content Include="warehouse\StockView.aspx" />
+    <Content Include="warehouse\TransferDtl.aspx" />
+    <Content Include="warehouse\TransferRecord.aspx" />
+    <Content Include="warehouse\WebForm1.aspx" />
+    <None Include="ExcelFiles\2012031822283132.xls" />
+    <None Include="ExcelFiles\2012031822300987.xls" />
+    <None Include="ExcelFiles\2012031822440516.xls" />
+    <None Include="ExcelFiles\2012031822452552.xls" />
+    <None Include="ExcelFiles\2012031822463887.xls" />
+    <None Include="ExcelFiles\2012031822555685.xls" />
+    <None Include="ExcelFiles\2012031822562347.xls" />
+    <None Include="ExcelFiles\2012031823050316.xls" />
+    <None Include="ExcelFiles\2012031823053871.xls" />
+    <None Include="ExcelFiles\2012031823114725.xls" />
+    <None Include="ExcelFiles\2012031823122353.xls" />
+    <None Include="lhgdialog\_doc\commercial_license.doc" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\GenerateResource-ResGen.read.1.tlog" />
+    <None Include="obj\Debug\GenerateResource-ResGen.write.1.tlog" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\Web.csproj.GenerateResource.Cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\" />
+    <Folder Include="Components\" />
+    <Folder Include="Control\" />
+    <Folder Include="css\" />
+    <Folder Include="DataBackup\" />
+    <Folder Include="obj\Debug\Refactor\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50257</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

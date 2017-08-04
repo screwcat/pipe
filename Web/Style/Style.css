@@ -1,0 +1,88 @@
+﻿body
+{
+}
+.fontRed
+{
+	color: Red;
+	font-size: 12px;
+}
+.loginBtn
+{
+	background: url(/Images/loginBtn.gif) no-repeat center;
+}
+.loadBtn
+{
+	background: url(/Images/loading1.gif) no-repeat center;
+}
+td
+{
+	font-size: 9pt;
+}
+a
+{
+	color: #000000;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #E78a29;
+	text-decoration: none;
+}
+#sera li
+{
+	float: left;
+	width: 80px;
+	list-style-type: none;
+}
+.hidethis
+{
+	display: none;
+}
+#searchResu td
+{
+	height: 20px;
+}
+#searchResu tr:hover
+{
+	background: #CCC;
+	cursor: default;
+}
+.proQty
+{
+	width: 90px;
+}
+.proPrice
+{
+	width: 90px;
+}
+#totalPrice
+{
+	float: left;
+}
+.transparent
+{
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+table.gridview_m
+{
+	border-collapse: collapse;
+	border: solid 1px #ccc;
+	width: 98%;
+	font-size: 10pt;
+}
+table.gridview_m td, th
+{
+	border-collapse: collapse;
+	border: solid 1px #ccc;
+	font-size: 10pt;
+	height: 20px;
+}
+table.gridview_m th
+{
+	background: url(/images/news-title-bg.gif);
+	font-weight: normal;
+	height: 23px;
+}

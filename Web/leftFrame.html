@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>左边菜单</title>
+    <style type="text/css">
+        BODY
+        {
+            font-size: 12px; /*background-image: url(images/200842182840682_1.gif);*/
+            background-image: url(images/200842182840682_1.gif);
+            color: HighlightText;
+        }
+        TD
+        {
+            font-size: 12px;
+        }
+        .menu_box_pad
+        {
+            padding-right: 2px;
+            padding-left: 2px;
+            background: #FFF;
+            padding-bottom: 2px;
+            padding-top: 0px;
+        }
+        .menu_box
+        {
+            border-right: #d6d6d6 1px solid;
+            border-top: #ababab 1px solid;
+            border-left: #ababab 1px solid;
+            border-bottom: #d6d6d6 1px solid;
+        }
+        .menu_box TH
+        {
+            background: url(images/menu_list_icon.gif) no-repeat center 50%;
+            width: 10px;
+            line-height: 22px;
+        }
+        .menu_box TD
+        {
+            background: url(images/menu_list_split.gif) no-repeat left bottom;
+            line-height: 20px;
+        }
+        .menu_box A
+        {
+            color: #000;
+            text-decoration: none;
+        }
+        .menu_box A:hover
+        {
+            text-decoration: underline;
+        }
+        .hand
+        {
+            cursor: pointer;
+        }
+        .ctrl_menu
+        {
+            border-right: #767676 1px solid;
+            background: #B8D6F3;
+            border-left: #767676 1px solid;
+            border-bottom: #767676 1px solid;
+            width: 2px;
+        }
+        .ctrl_menu_title
+        {
+            padding-left: 15px;
+            font-weight: bold;
+            line-height: 25px;
+        }
+        .ctrl_menu_title_bg
+        {
+            background: url(images/menu_title_bg.gif);
+            width: 114px;
+        }
+        .top_bg
+        {
+            background: url(images/top_bg.gif);
+        }
+        .logo_bg
+        {
+            background: url(images/logo_bg.gif);
+        }
+        .a01 A:link
+        {
+            color: #000;
+            text-decoration: underline;
+        }
+        .a01 A:visited
+        {
+            color: #000;
+            text-decoration: underline;
+        }
+        .a01 A:active
+        {
+            color: #000;
+            text-decoration: none;
+        }
+        .a01 A:hover
+        {
+            color: #000;
+            text-decoration: none;
+        }
+        #top_nav_menu
+        {
+            color: #fff;
+        }
+        #top_nav_menu A
+        {
+            color: #fff;
+            text-decoration: none;
+        }
+        #top_nav_menu A:hover
+        {
+            color: #ff6;
+            text-decoration: underline;
+        }
+        -- ></style>
+
+    <script type="text/javascript">
+
+        function $(s) { return document.getElementById(s); }
+        function swap(s, a, b, c) { $(s)[a] = $(s)[a] == b ? c : b; }
+        function hide(s) { $(s).style.display = $(s).style.display == "none" ? "" : "none"; }
+
+        function openjsj() {
+            window.open("Tool/jsj.htm", null, "height=100%,width=540,status=yes,toolbar=yes,menubar=yes,location=yes,resizable=yes,scroll=yes");
+
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <table class="ctrl_menu" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td width="141" style="height: 10px; width: 90px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="width: 90px" valign="top">
+                        <!-- 快速通道 -->
+                        <table class="ctrl_menu_title_bg" cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                                <tr class="hand" onclick="hide('hideMenuFunc0')">
+                                    <td class="ctrl_menu_title" width="174">
+                                        公开信息
+                                    </td>
+                                    <td width="21">
+                                        <img id="MenuFunc0" src="Images/menu_title_up.gif">
+                                    </td>
+                                </tr>
+                                <tr id="hideMenuFunc0">
+                                    <td class="menu_box_pad" align="left" colspan="2">
+                                        <table class="menu_box" cellspacing="5" cellpadding="0" width="100%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                    </th>
+                                                    <td>
+                                                        <a href="/BaseInfo/PassWordEdit.aspx" target="mainFrame">密码修改</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                    </th>
+                                                    <td>
+                                                        <a href="/BaseInfo/PowerManage.aspx" target="mainFrame">权限管理</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" valign="top" style="width: 90px; height: 48px">
+                        <table border="0" id="guanlimenu" cellpadding="0" cellspacing="0" class="ctrl_menu_title_bg"
+                            width="195">
+                            <tr class="hand" onclick="hide('hideMenuFunc9')">
+                                <td class="ctrl_menu_title" width="174">
+                                    管理流程
+                                </td>
+                                <td width="21">
+                                    <img id="Img5" src="Images/menu_title_down.gif" />
+                                </td>
+                            </tr>
+                            <tr id="hideMenuFunc9" style="display: ">
+                                <td align="left" class="menu_box_pad" colspan="2" style="height: 17px">
+                                    <table border="0" cellpadding="0" cellspacing="5" class="menu_box" width="100%">
+                                        <tr>
+                                            <th>
+                                                &nbsp;
+                                            </th>
+                                            <td>
+                                                <a href="/warehouse/BuyOrder/List.aspx" target="mainFrame">进货管理</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                &nbsp;
+                                            </th>
+                                            <td>
+                                                <a href="/warehouse/StockView.aspx" target="mainFrame">仓库库存情况 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                &nbsp;
+                                            </th>
+                                            <td>
+                                                <a href="/Sales/SaleModifyList.aspx" target="mainFrame">售货单修改 </a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                &nbsp;
+                                            </th>
+                                            <td>
+                                                <a href="/warehouse/EnterStockEdit.aspx" target="mainFrame">入库单修改 </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr height="5">
+                    <td style="height: 4px; width: 90px;" valign="top" align="center">
+                        <table class="ctrl_menu_title_bg" id="salesMenu" cellspacing="0" cellpadding="0"
+                            width="195" border="0">
+                            <tbody>
+                                <tr class="hand" onclick="hide('hideMenuFunc4')">
+                                    <td class="ctrl_menu_title" width="174">
+                                        销售开单
+                                    </td>
+                                    <td width="21">
+                                        <img id="Img1" src="Images/menu_title_down.gif">
+                                    </td>
+                                </tr>
+                                <tr id="hideMenuFunc4" style="display: ">
+                                    <td class="menu_box_pad" align="left" colspan="2" style="height: 17px">
+                                        <table class="menu_box" cellspacing="5" cellpadding="0" width="100%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/Sales/sell.aspx">销售开单 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/Sales/BackSale.aspx">销售退货 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/Sales/SaleReport.aspx">销售记录 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/Sales/BackSaleRecord.aspx">退货记录 </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr height="5">
+                    <td style="width: 90px; height: 4px" align="center" valign="top">
+                        <table class="ctrl_menu_title_bg" id="StockMenuTable" cellspacing="0" cellpadding="0"
+                            width="195" border="0">
+                            <tbody>
+                                <tr class="hand" onclick="hide('hideMenuFunc5')">
+                                    <td class="ctrl_menu_title" width="174">
+                                        库存开单
+                                    </td>
+                                    <td width="21">
+                                        <img id="Img2" src="Images/menu_title_down.gif">
+                                    </td>
+                                </tr>
+                                <tr id="hideMenuFunc5" style="display: ">
+                                    <td class="menu_box_pad" align="left" colspan="2" style="height: 17px">
+                                        <table class="menu_box" cellspacing="5" cellpadding="0" width="100%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/warehouse/AddLeaveStock.aspx">仓库调拨 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/warehouse/AddStockContract.aspx">填写入库 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/warehouse/AddBackStock.aspx">物品出库 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/warehouse/EnterStockRecord.aspx">进货记录 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/warehouse/BackStockRecord.aspx">出库记录 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/warehouse/TransferRecord.aspx">仓库调拔记录 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/report/productflowing.aspx">查询出入记录</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="width: 90px; height: 15px" valign="top">
+                        <table class="ctrl_menu_title_bg" id="calgouMenu" cellspacing="0" cellpadding="0"
+                            width="195" border="0">
+                            <tbody>
+                                <tr class="hand" onclick="hide('hideMenuFunc3')">
+                                    <td class="ctrl_menu_title" width="174">
+                                        报表
+                                    </td>
+                                    <td width="21">
+                                        <img id="MenuFunc3" src="Images/menu_title_down.gif">
+                                    </td>
+                                </tr>
+                                <tr id="hideMenuFunc3" style="display: ">
+                                    <td class="menu_box_pad" align="left" colspan="2">
+                                        <table class="menu_box" cellspacing="5" cellpadding="0" width="100%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/Report/SaleGather.aspx">销售汇总 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/Report/SaleDefinite.aspx">销售明细 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/Report/EnterStockGather.aspx">入库汇总 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/Report/EnterStockDefinite.aspx">入库明细 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/Report/CheckStock.aspx">库存盘点 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/Report/HisTab.aspx">查看历史报表 </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="width: 90px; height: 15px;" valign="top">
+                        <table class="ctrl_menu_title_bg" id="systemSetMenu" cellspacing="0" cellpadding="0"
+                            border="0">
+                            <tbody>
+                                <tr class="hand" onclick="hide('hideMenuFunc6')">
+                                    <td class="ctrl_menu_title" width="174" align="center">
+                                        基础信息维护
+                                    </td>
+                                    <td width="21">
+                                        <img id="Img3" src="Images/menu_title_down.gif">
+                                    </td>
+                                </tr>
+                                <tr id="hideMenuFunc6" style="display: ">
+                                    <td class="menu_box_pad" align="left" colspan="2" style="height: 17px">
+                                        <table class="menu_box" cellspacing="5" cellpadding="0" width="100%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/BaseInfo/Customer/list.aspx">客户资料 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/BaseInfo/Supplier/list.aspx">供应商管理 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/BaseInfo/product/list.aspx">商品资料 </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/BaseInfo/ProductSpec/List.aspx">商品规格管理</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/BaseInfo/ProductUnit/List.aspx">商品单位管理</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/BaseInfo/ProductClass/List.aspx">商品总分类</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/BaseInfo/ProductList/List.aspx">商品详细分类</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/BaseInfo/Dept/list.aspx">部门管理</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/BaseInfo/StoreHouse/list.aspx">仓库管理</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- /好友信息 -->
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" style="width: 90px; height: 15px;" valign="top">
+                        <!-- 好友信息 -->
+                        <table class="ctrl_menu_title_bg" id="Table1" cellspacing="0" cellpadding="0" width="195"
+                            border="0">
+                            <tbody>
+                                <tr class="hand" onclick="hide('hideMenuFunc6')">
+                                    <td class="ctrl_menu_title" width="174" align="center">
+                                        系统设置
+                                    </td>
+                                    <td width="21">
+                                        <img id="Img4" src="Images/menu_title_down.gif">
+                                    </td>
+                                </tr>
+                                <tr id="Tr1" style="display: ">
+                                    <td class="menu_box_pad" align="left" colspan="2" style="height: 17px">
+                                        <table class="menu_box" cellspacing="5" cellpadding="0" width="100%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <th>
+                                                        &nbsp;
+                                                    </th>
+                                                    <td>
+                                                        <a target="mainFrame" href="/SysManage/DataBackup.aspx">数据备份 </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- /好友信息 -->
+                    </td>
+                </tr>
+                <tr height="5">
+                    <td style="width: 90px; height: 5px;" align="center">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td align="middle" style="width: 90px">
+                        <!-- BLOG信息 -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
